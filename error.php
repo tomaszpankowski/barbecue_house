@@ -1,3 +1,15 @@
+<?php
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if(!isset($_SESSION["errorMessage"])){
+    $_SESSION["errorMessage"] = "Unfortunately your message was not send due to technical ";
+    $_SESSION["errorMessage"] .= "problems. Please try again later or contact with us by phone.";
+}
+
+?>
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8"/>
@@ -7,9 +19,9 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
         <link rel="icon" href="img/favicon.png"/>
-        <title>Privacy policy</title>
+        <title>Barbecue house | Message not sent</title>
     </head>
-    <body class="minh-100vh bg-secondary">
+    <body class="minh-100vh">
         <header class="position-absolute w-100">
             <nav class="navbar navbar-dark navbar-expand-md bg-transparent">
                 <a href="index.html" class="navbar-brand ms-3">
@@ -41,54 +53,22 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <section class="privacy-s1 container-fluid d-flex minh-100vh align-items-center">
-                <div class="row mx-0 w-100 py-5 my-5">
-                    <div class="col-12 col-sm-9 col-md-7 col-lg-6 mx-auto">
-                        <div class="card text-center text-white bg-dark border-secondary shadow opacity-8">
-                            <div class="card-header">
-                                <h1 class="h4">
-                                    Privacy Policy
-                                </h1>
-                            </div>
-                            <div class="card-body px-4 text-start">
-                                <p class="mt-3">
-                                    This website is a demo version of real website, It doesn't collect and process, 
-                                    in long term meaning (longer than needed for website operation during visitor's 
-                                    presence), any user (visitor) data. All information collected during visitor's 
-                                    presence on this website is used only for technical purposes, required for correct 
-                                    operation of website or demonstration purposes related to technical mechanisms 
-                                    and presentation of its operation.
-                                </p>
-                                <p class="mt-3">
-                                    All data stored in cookies is directly related to saved visitor's settings 
-                                    for website's mechanisms, and can be managed by visitor with functionality 
-                                    provided by visitor's web browser - in order to get more information visitor 
-                                    should check web browser's manual.
-                                </p>
-                                <p class="mt-3">
-                                    However this website may contain attached third-party addons (like for 
-                                    example: scripts added by hosting services provider) which may collect 
-                                    visitors data for security and technical purposes. In order to know more 
-                                    about them, visitor should visit hosting provider's website and check 
-                                    privacy policy related to collected data.
-                                </p>
-                                <p class="mt-3">
-                                    All materials used for creation of this website were acquired from legal 
-                                    resources. Any convergences and similarities with any materials presented 
-                                    on other websites or resources are accidental.
-                                </p>
-                                <div class="card-footer border-top text-center">
-                                    <a href="index.html" class="btn btn-outline-light rounded-pill mt-3">
-                                        back to <span class="fw-bold">Home</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+        <section class="index-s1 container-fluid d-flex minh-100vh align-items-center py-5">
+            <div class="my-auto text-center text-md-left px-md-5 w-100">               
+                <div class="col-10 col-sm-8 col-md-6 offset-1 offset-sm-2 offset-md-3 text-center">
+                    <div class="alert alert-danger">
+                        <h3 class="text-center font-header">Error!</h3>
+                        <p class="initialism">
+                            <?php
+                                echo $_SESSION["errorMessage"];
+                            ?>
+                        </p>                  
+                        <a href="appointment.html" 
+                            class="btn btn-danger">Back</a>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
         <footer class="container-fluid d-flex text-dark align-items-center bg-dark text-white pt-3 opacity-9 border-top">
             <div class="row mx-0 w-100 small opacity-9">
                 <div class="col-12 col-md-6 col-lg-5 text-center text-md-start">
@@ -131,6 +111,12 @@
         </footer>
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </html>
+<?php $_SESSION["errorMessage"]=null ?>
+
+        
+  
+        
+
+
