@@ -91,21 +91,27 @@ else{
 
 ?>
 <!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-        <link rel="icon" href="img/favicon.png"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+        <meta property="og:title" content="Barbecue house">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:locale" content="en_US">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="icon" href="img/favicon.png">
         <title> Barbecue house | User</title>
     </head>
     <body class="minh-100vh">
         <header class="position-absolute w-100">
             <nav class="navbar navbar-dark navbar-expand-md bg-transparent">
                 <a href="index.html" class="navbar-brand ms-3">
-                    <img src="img/navbar_logo.png" class="img-fluid" alt="logo"/>
+                    <img src="img/navbar_logo.png" class="img-fluid" alt="logo">
                 </a>
                 <button class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#main-nav">
                     <span class="navbar-toggler-icon"></span>
@@ -142,11 +148,11 @@ else{
                 include "templates/tmp_login.php";                            
             }
             ?>
-        </main>    
-        <footer class="container-fluid d-flex text-dark align-items-center bg-dark text-white pt-3 opacity-9 border-top">
+        </main>   
+        <footer class="container-fluid d-flex align-items-center bg-danger text-dark pt-3 opacity-9 border-top border-dark">
             <div class="row mx-0 w-100 small opacity-9">
                 <div class="col-12 col-md-6 col-lg-5 text-center text-md-start">
-                    <img src="img/navbar_logo.png" class="img-fluid" alt="logo"/>
+                    <img src="img/navbar_logo.png" class="img-fluid" alt="logo">
                     <p class="initialism fw-normal">
                         Our distinct flavor profiles stand out with mouth-watering soul sides dishes 
                         that complement our meats. We cook everything fresh, with the goal of running 
@@ -158,25 +164,25 @@ else{
                     <ul class="list-inline">
                         <li class="list-inline-item">
                             <a href="#">
-                                <span class="fa fa-facebook text-white"></span>
+                                <span class="fa fa-facebook text-dark"></span>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">
-                                <span class="fa fa-instagram text-white"></span>
+                                <span class="fa fa-instagram text-dark"></span>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">
-                                <span class="fa fa-twitter text-white"></span>
+                                <span class="fa fa-twitter text-dark"></span>
                             </a>
                         </li>
                     </ul>       
                 </div>
-                <div class="col-12 text-center border-top">
+                <div class="col-12 text-center border-top border-dark">
                     <p class="mb-1">
-                        Copyright &copy; 2021 Tomasz Pankowski. 
-                        <a href="privacy.html" class="fw-bold text-white text-decoration-none">
+                        Copyright &copy; 2021-2022 Tomasz Pankowski. 
+                        <a href="privacy.html" class="fw-bold text-dark text-decoration-none">
                             Privacy policy
                         </a>
                     </p>
@@ -185,5 +191,6 @@ else{
         </footer>
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/gpdr__bootstrap.js"></script>
     </body>
 </html>

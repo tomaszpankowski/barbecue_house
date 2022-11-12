@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "JotiOne";
+  src: url("../fonts/JotiOne-Regular.ttf");
+}
 /* line 1, ../sass/partials/_layout.scss */
 * {
   box-sizing: border-box;
@@ -584,29 +588,35 @@ body, html {
 }
 
 /* line 29, ../sass/partials/_modules.scss */
+h1, h2, h3, h4, h5, h6, .nav-link {
+  font-family: "JotiOne";
+  letter-spacing: 1px;
+}
+
+/* line 33, ../sass/partials/_modules.scss */
 header {
   z-index: 100;
 }
 
-/* line 32, ../sass/partials/_modules.scss */
+/* line 36, ../sass/partials/_modules.scss */
 textarea {
   resize: none;
 }
 
 @media all and (max-width: 767px) {
-  /* line 37, ../sass/partials/_modules.scss */
+  /* line 41, ../sass/partials/_modules.scss */
   .index-s1, .offer-s1 {
     background-position: left !important;
   }
 
-  /* line 42, ../sass/partials/_modules.scss */
+  /* line 46, ../sass/partials/_modules.scss */
   .navbar-nav {
     background-color: #333;
     border: 1px solid #666;
     opacity: 0.8;
     padding-right: 10px;
   }
-  /* line 48, ../sass/partials/_modules.scss */
+  /* line 52, ../sass/partials/_modules.scss */
   .navbar-toggler {
     border: 1px solid #aa1e29;
     background-color: #dc3845;
